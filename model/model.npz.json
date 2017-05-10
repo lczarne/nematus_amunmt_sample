@@ -1,0 +1,73 @@
+{
+  "batch_size": 40, 
+  "clip_c": 1.0, 
+  "datasets": [
+    "/work/local/l.czarnecki/tmp/de2en.multigpu.1.01/corpus.bpe.de", 
+    "/work/local/l.czarnecki/tmp/de2en.multigpu.1.01/corpus.bpe.en"
+  ], 
+  "decay_c": 0.0, 
+  "decoder": "gru_cond", 
+  "decoder_truncate_gradient": -1, 
+  "dictionaries": [
+    "/work/local/l.czarnecki/tmp/de2en.multigpu.1.01/corpus.bpe.de.json", 
+    "/work/local/l.czarnecki/tmp/de2en.multigpu.1.01/corpus.bpe.en.json"
+  ], 
+  "dim": 1024, 
+  "dim_per_factor": [
+    512
+  ], 
+  "dim_word": 512, 
+  "dispFreq": 1000, 
+  "domain_interpolation_inc": 0.1, 
+  "domain_interpolation_indomain_datasets": [
+    "indomain.en", 
+    "indomain.fr"
+  ], 
+  "domain_interpolation_max": 1.0, 
+  "domain_interpolation_min": 0.1, 
+  "dropout_embedding": 0.1, 
+  "dropout_hidden": 0.1, 
+  "dropout_source": 0.0, 
+  "dropout_target": 0.0, 
+  "encoder": "gru", 
+  "encoder_truncate_gradient": -1, 
+  "external_validation_script": "/work/local/l.czarnecki/clean/validate.sh", 
+  "factors": 1, 
+  "finish_after": 10000000, 
+  "lrate": 0.0001, 
+  "map_decay_c": 0.0, 
+  "max_epochs": 5000, 
+  "maxibatch_size": 20, 
+  "maxlen": 50, 
+  "model_version": 0.1, 
+  "mrt_alpha": 0.005, 
+  "mrt_loss": "SENTENCEBLEU n=4", 
+  "mrt_ml_mix": 0, 
+  "mrt_reference": true, 
+  "mrt_samples": 40, 
+  "mrt_samples_meanloss": 10, 
+  "n_words": 60000, 
+  "n_words_src": 60000, 
+  "objective": "CE", 
+  "optimizer": "adam", 
+  "overwrite": false, 
+  "patience": 10, 
+  "prior_model": null, 
+  "reload_": true, 
+  "reload_training_progress": true, 
+  "sampleFreq": 10000, 
+  "saveFreq": 20000, 
+  "saveto": "/work/local/l.czarnecki/clean/outputs/model_deen/model.npz", 
+  "shuffle_each_epoch": true, 
+  "sort_by_length": true, 
+  "tie_decoder_embeddings": false, 
+  "tie_encoder_decoder_embeddings": false, 
+  "use_domain_interpolation": false, 
+  "use_dropout": false, 
+  "validFreq": 10000, 
+  "valid_batch_size": 40, 
+  "valid_datasets": [
+    "/work/local/l.czarnecki/tmp/de2en.multigpu.1.01/newstest2013.bpe.de", 
+    "/work/local/l.czarnecki/tmp/de2en.multigpu.1.01/newstest2013.bpe.en"
+  ]
+}
